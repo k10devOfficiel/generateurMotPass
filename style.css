@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.block{
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+.blockinput{
+    border:  solid black 1px;
+    border-radius: 5px;
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    
+}
+input{
+    outline: none;
+    border: none;
+    letter-spacing: 5px;
+    
+}
+input::placeholder{
+    letter-spacing: 0px;
+}
+.fa-copy{
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+
+}
+.fa-copy:hover{
+    opacity: 0.7;
+}
+.btnGenerer{
+    margin: 10px;
+    padding: 10px;
+   
+}
+.btnGenerer button{
+    border:solid black 1px ;
+    width: auto;
+    height: 30px;
+   font-size: 20px;
+   background-color: aliceblue;
+   border-radius: 5px;
+   transition: 0.5s;
+   
+}
+.btnGenerer button:hover{
+    background-color: green;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+/* État par défaut : caché à droite de l'écran */
+.notification {
+    position: fixed;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(118, 180, 118);
+    right: -400px; /* Hors de l'écran */
+    bottom: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    transition: right 0.5s ease-in-out; /* Animation fluide du mouvement */
+}
+
+/* État quand JS ajoute la classe .active */
+.notification.active {
+    right: 40px; /* Revient dans l'écran */
+}
